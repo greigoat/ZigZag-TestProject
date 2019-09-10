@@ -1,0 +1,16 @@
+*********** SCRIPTABLE OBJECT BASED GAME ARCHITECTURE *******
+The idea is to create a game data system for designers to tweak content partially independently of the programmers and also isolated from the scenes
+The source of idea https://www.youtube.com/watch?v=raQ3iHhE_Kk
+Currently the system is in a very barebone alpha stage
+
+TODO:
+Events.
+ - Find out how we can create events with various arguments wihtout writing too much boilerplate code
+
+Variables
+ - Since we know unity serializes data of scriptable objets modified in play mode we need to find a way to reset all the data back to the state before the play mode.
+ - Components might expose the data but they might now be necessarily the varaibles. 
+   IMO Components should not really now about that definition is a particular object they should just expose the data they need and we should find a way to inject
+   selection of the value from the editor
+ - Variable references seem to be redundant. They are basically a double references. The idea was to tweak the value without breaking dependencies in scenes.
+ - Conditionals are very barebones and its architecture might not be that good at this moment.
